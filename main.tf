@@ -75,7 +75,7 @@ resource "aws_security_group" "ad_lab_sg" {
 
 resource "aws_instance" "ad_lab_instance" {
   ami           = "ami-0c02fb55956c7d316" # Replace with Windows AMI ID
-  instance_type = "t3.medium"            # Adjust instance type
+  instance_type = "t3.medium"             # Adjust instance type
   subnet_id     = aws_subnet.ad_lab_subnet.id
   security_groups = [
     aws_security_group.ad_lab_sg.name
